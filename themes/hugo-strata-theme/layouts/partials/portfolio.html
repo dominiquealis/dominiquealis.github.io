@@ -1,13 +1,22 @@
-{{ "<!-- portfolio -->" | safeHTML }}
 <section>
-	{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+<header class="major"><h2>Recent Projects</h2></header>	
 	<div class="row">
-		{{ range .Site.Params.portfolio.gallery }}
 		<article class="6u 12u$(xsmall) work-item">
-			<a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a>
-			<h3>{{ .title | markdownify }}</h3>
-			<p>{{ .description | markdownify }}</p>
+			<a href="https://github.com/dominiquealis/NeighborhoodProjectApp" class="image fit thumb"><img src="https://dominiquealis.github.io/portfolio/images/fulls/hometest.png" alt="" /></a>
+			<h3>Neighborly</h3>
+			<p>A simplifed way to stay in touch with your neighbors</p>
 		</article>
-		{{ end }}
+		
+		<article class="6u 12u$(xsmall) work-item">
+			<a href="https://github.com/dominiquealis/Relaxr-Project" class="image fit thumb"><img src="https://dominiquealis.github.io/portfolio/images/thumbs/02.jpg" alt="" /></a>
+			<h3>Relaxr</h3>
+			<p>Relax. Let us take care of it.</p>
+		</article>
+		
+		<article class="6u 12u$(xsmall) work-item">
+			<a href="http://www.ravelry.com/projects/Dominiquealis" class="image fit thumb"><img src="https://dominiquealis.github.io/portfolio/images/thumbs/quince.jpg" alt="" /></a>
+			<h3>Knitting Projects</h3>
+			<p>Fellow knitter? Check out some of my projects on Ravelry.</p>
+		</article>	
 	</div>
 </section>
